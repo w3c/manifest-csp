@@ -50,7 +50,9 @@
   </head>
   <body>
     <section id='abstract'>
-      <p>CSP extension to manifest spec.</p>
+      <p>
+        CSP extension to manifest spec.
+      </p>
     </section>
     <section id="sotd">
       <p>
@@ -77,7 +79,8 @@
           Example - restrictive CSP policy
         </h3>
         <p>
-          The following policy allows fetching images, scripts, and CSS from the same origin. It blocks everything else.
+          The following policy allows fetching images, scripts, and CSS from
+          the same origin. It blocks everything else.
         </p>
         <pre class="example highlight json" title="Using CSP in a manifest">
 {
@@ -122,15 +125,28 @@
         required to process a particular member and what to do when a type does
         not match what is expected.
       </p>
-    </section> 
+      <p>
+        The concepts <dfn><a href=
+        "http://w3c.github.io/manifest/#dfn-manifest">manifest</a></dfn>,
+        <dfn><a href=
+        "http://w3c.github.io/manifest/#dfn-associated-with-a-manifest">associated
+        with a manifest</a></dfn>, and <dfn><a href=
+        "http://w3c.github.io/manifest/#dfn-issue-a-developer-warning">issue a
+        developer warning</a></dfn> are defined in [[!appmanifest]].
+      </p>
+    </section>
     <section>
       <h2>
         Processing the manifest
       </h2>
-      <p>At the <a href="http://w3c.github.io/manifest/#dfn-extension-point">extension point</a>:</p>
+      <p>
+        At the <a href=
+        "http://w3c.github.io/manifest/#dfn-extension-point">extension
+        point</a>:
+      </p>
       <ol>
-        <li>Let <var>set of directives</var> be the result of running the <a>
-          steps for processing the <code>csp</code> member</a>.
+        <li>Let <var>set of directives</var> be the result of running the
+        <a>steps for processing the <code>csp</code> member</a>.
         </li>
         <li>If <var>set of directives</var> is <code>undefined</code>, then
         skip this substep:
@@ -161,8 +177,8 @@
         <p>
           The <code>csp</code> member supplements the <a href=
           "http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html#policy-delivery">
-          policy delivery</a> mechanisms defined in [[!CSP11]], and allows
-          the author to indicate that the user agent is to enforce a
+          policy delivery</a> mechanisms defined in [[!CSP11]], and allows the
+          author to indicate that the user agent is to enforce a
           <a>supplemental security policy</a> (according to the rules of
           <a href=
           "http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html#enforcing-multiple-policies.x">
@@ -173,24 +189,24 @@
       <p>
         The <dfn>steps for processing the csp member</dfn> is given by the
         following algorithm. The algorithm takes a <a>manifest</a>
-        <var>manifest</var> as an argument, and returns a <a>valid
-        supplemental security policy</a> or <code>undefined</code>.
+        <var>manifest</var> as an argument, and returns a <a>valid supplemental
+        security policy</a> or <code>undefined</code>.
       </p>
       <ol>
         <li>Let <var>value</var> be the result of calling the
-        <a>[[\GetOwnProperty]]</a> internal method of <var>manifest</var>
-        with argument "csp".
+        <a>[[\GetOwnProperty]]</a> internal method of <var>manifest</var> with
+        argument "csp".
         </li>
         <li>Let <var>type</var> be <a>Type</a>(<var>value</var>).
         </li>
         <li>If <var>type</var> is not "string", and is not
-        <code>undefined</code>, then <a>issue a developer warning</a> that
-        the type of the policy is invalid, and return <code>undefined</code>.
+        <code>undefined</code>, then <a>issue a developer warning</a> that the
+        type of the policy is invalid, and return <code>undefined</code>.
         </li>
         <li>Let <var>set of directives</var> be a set returned by the
           <a href="http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html#parse-a-policy">
-          parse a policy</a> [[!CSP11]] algorithm, that takes
-          <var>value</var> as argument.
+          parse a policy</a> [[!CSP11]] algorithm, that takes <var>value</var>
+          as argument.
         </li>
         <li>If <var>set of directives</var> matches the <a href=
         "http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html#policies">
@@ -211,7 +227,7 @@
         Use cases and requirements
       </h2>
       <p class="issue">
-      TBW...
+        TBW...
       </p>
     </section>
     <section class="appendix">
