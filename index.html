@@ -167,21 +167,21 @@
       <p>
         The <dfn id="member-csp"><code>csp</code></dfn> member is a <a title=
         "json-string">string</a> that represents a <dfn>supplemental <a href=
-        "http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html#dfn-security-policy">
+        "https://w3c.github.io/webappsec/specs/content-security-policy/#security-policy">
         security policy</a></dfn>. The string is a <dfn>valid supplemental
         security policy</dfn> if it matches the <a href=
-        "http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html#policies">
-        <code>policy</code> production</a> defined in [[!CSP11]].
+        "https://w3c.github.io/webappsec/specs/content-security-policy/#policy-token">
+        <code>policy-token</code> production</a> defined in [[!CSP11]].
       </p>
       <div class="note">
         <p>
           The <code>csp</code> member supplements the <a href=
-          "http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html#policy-delivery">
+          "https://w3c.github.io/webappsec/specs/content-security-policy/#policy-delivery">
           policy delivery</a> mechanisms defined in [[!CSP11]], and allows the
           author to indicate that the user agent is to enforce a
           <a>supplemental security policy</a> (according to the rules of
           <a href=
-          "http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html#enforcing-multiple-policies.x">
+          "https://w3c.github.io/webappsec/specs/content-security-policy/#enforcing-multiple-policies">
           enforcing multiple policies</a> [[!CSP11]]) for a resource
           <a>associated with a manifest</a>.
         </p>
@@ -204,14 +204,14 @@
         type of the policy is invalid, and return <code>undefined</code>.
         </li>
         <li>Let <var>set of directives</var> be a set returned by the
-          <a href="http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html#parse-a-policy">
-          parse a policy</a> [[!CSP11]] algorithm, that takes <var>value</var>
-          as argument.
+          <a href="https://w3c.github.io/webappsec/specs/content-security-policy/#parse-the-policy">
+          parse the policy</a> [[!CSP11]] algorithm, that takes
+          <var>value</var> as argument.
         </li>
         <li>If <var>set of directives</var> matches the <a href=
-        "http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html#policies">
-          <code>policy</code> production</a> [[!CSP11]], return <var>set of
-          directives</var>, otherwise, <a>issue a developer warning</a> that
+        "https://w3c.github.io/webappsec/specs/content-security-policy/#policy-token">
+          <code>policy-token</code> production</a> [[!CSP11]], return <var>set
+          of directives</var>, otherwise, <a>issue a developer warning</a> that
           the policy is invalid and return <code>undefined</code>.
         </li>
       </ol>
